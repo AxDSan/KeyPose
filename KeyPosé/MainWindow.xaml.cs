@@ -251,7 +251,7 @@ namespace KeyPose
                 KeyPressed2 = e.Key.ToString();
             }else
             {
-                KeyPressed2 = "";
+                //KeyPressed2 = "";
             }
 
         }
