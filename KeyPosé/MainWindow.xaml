@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ShowInTaskbar="False"
-        Title="MainWindow" Height="118.148" Width="{Binding SystemParameters.WorkArea}" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" MouseLeftButtonDown="Window_MouseLeftButtonDown" Loaded="Window_Loaded" Topmost="True" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
+        Title="MainWindow" Height="118.148" Width="{Binding SystemParameters.WorkArea}" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" MouseLeftButtonDown="Window_MouseLeftButtonDown" Loaded="Window_Loaded" Topmost="True" KeyDown="Window_KeyDown">
     <Grid>
         <Rectangle x:Name="rectangle1" Fill="#7F000000" Stroke="Black" RadiusY="5.5" RadiusX="5.5" Opacity="0"/>
         <TextBlock x:Name="textBlock" Margin="5,-5,5,5" TextWrapping="Wrap" Text="NaN" Foreground="White" FontFamily="Yu Gothic UI" TextAlignment="Center" FontSize="95">

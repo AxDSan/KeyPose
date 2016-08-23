@@ -30,3 +30,5 @@ C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\obj\
 C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\obj\Debug\KeyPosé.pdb
 C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\obj\Debug\Properties\DesignTimeResources.baml
 C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\obj\Debug\KeyPose.csprojResolveAssemblyReference.cache
+C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\obj\Debug\SettingsWindow.g.cs
+C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\obj\Debug\SettingsWindow.baml

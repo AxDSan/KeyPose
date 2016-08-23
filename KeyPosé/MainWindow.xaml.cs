@@ -16,6 +16,31 @@ namespace KeyPose
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static class WindowsServices
+        {
+            const int WS_EX_TRANSPARENT = 0x00000020;
+            const int GWL_EXSTYLE = (-20);
+
+            [DllImport("user32.dll")]
+            static extern int GetWindowLong(IntPtr hwnd, int index);
+
+            [DllImport("user32.dll")]
+            static extern int SetWindowLong(IntPtr hwnd, int index, int newStyle);
+
+            public static void SetWindowExTransparent(IntPtr hwnd)
+            {
+                var extendedStyle = GetWindowLong(hwnd, GWL_EXSTYLE);
+                SetWindowLong(hwnd, GWL_EXSTYLE, extendedStyle | WS_EX_TRANSPARENT);
+            }
+        }
+
+        protected override void OnSourceInitialized(EventArgs e)
+        {
+            base.OnSourceInitialized(e);
+            var hwnd = new WindowInteropHelper(this).Handle;
+            WindowsServices.SetWindowExTransparent(hwnd);
+        }
+
         private IKeyboardMouseEvents m_GlobalHook;
         private DispatcherTimer _timer;
         private int _counter;
@@ -108,7 +133,7 @@ namespace KeyPose
 
             m_GlobalHook.MouseDownExt += GlobalHookMouseDownExt;
             m_GlobalHook.KeyPress += GlobalHookKeyPress;
-            m_GlobalHook.KeyDown += GlobalHookKeyDown;
+            //m_GlobalHook.KeyDown += GlobalHookKeyDown;
             
         }
 
@@ -208,7 +233,7 @@ namespace KeyPose
         {
             m_GlobalHook.MouseDownExt -= GlobalHookMouseDownExt;
             m_GlobalHook.KeyPress -= GlobalHookKeyPress;
-            m_GlobalHook.KeyDown -= GlobalHookKeyDown;
+            //m_GlobalHook.KeyDown -= GlobalHookKeyDown;
 
             //It is recommened to dispose it
             m_GlobalHook.Dispose();
@@ -218,41 +243,19 @@ namespace KeyPose
         {
             
         }
-
-        public static class WindowsServices
-        {
-            const int WS_EX_TRANSPARENT = 0x00000020;
-            const int GWL_EXSTYLE = (-20);
-
-            [DllImport("user32.dll")]
-            static extern int GetWindowLong(IntPtr hwnd, int index);
-
-            [DllImport("user32.dll")]
-            static extern int SetWindowLong(IntPtr hwnd, int index, int newStyle);
-
-            public static void SetWindowExTransparent(IntPtr hwnd)
-            {
-                var extendedStyle = GetWindowLong(hwnd, GWL_EXSTYLE);
-                SetWindowLong(hwnd, GWL_EXSTYLE, extendedStyle | WS_EX_TRANSPARENT);
-            }
-        }
-
-        protected override void OnSourceInitialized(EventArgs e)
-        {
-            base.OnSourceInitialized(e);
-            var hwnd = new WindowInteropHelper(this).Handle;
-            WindowsServices.SetWindowExTransparent(hwnd);
-        }
+        
 
         private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
-            if ((Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
-            {
-                KeyPressed2 = e.Key.ToString();
-            }else
-            {
-                //KeyPressed2 = "";
-            }
+            KeyPressed2 = e.Key.ToString();
+
+            //if ((Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+            //{
+            //    KeyPressed2 = e.Key.ToString();
+            //}else
+            //{
+            //    //KeyPressed2 = "";
+            //}
 
         }
 
