@@ -24,6 +24,15 @@ Shows Keyboard strokes on-screen in a nicely and elegant display.
 
 ![KeyPosé Running](http://i.imgur.com/XehPl0P.png)
 
-Still this is pretty early in development, it doesn't do literally anything for the main functionality of the program, apart the animations that are working, nevertheless, pretty is promissing, I'll continue further development on my free time.
+Still this is pretty early in development, however I have added basic keys to show up on screen.
 
 Note: As you may notice this is just as Windows-Keystroker, but now It's on Managed Code (.NET)
+
+---
+
+# TODO:
+> 1. Finish Configuration GUI
+> 2. Complete the CTRL + <KeyCode> Function
+> 3. Add Shift + <KeyCode> Function
+> 4. Add Alt + <KeyCode> Function
+> 5. Lastly, Add function that handles a mixture of all of the above.
