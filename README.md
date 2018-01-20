@@ -32,7 +32,7 @@ Note: As you may notice this is just as Windows-Keystroker, but now It's on Mana
 
 # TODO:
 > 1. Finish Configuration GUI
-> 2. Complete the CTRL + <KeyCode> Function
-> 3. Add Shift + <KeyCode> Function
-> 4. Add Alt + <KeyCode> Function
+> 2. Complete the 'CTRL + <KeyCode>' Function
+> 3. Add 'Shift + <KeyCode>' Function
+> 4. Add 'Alt + <KeyCode>' Function
 > 5. Lastly, Add function that handles a mixture of all of the above.
