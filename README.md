@@ -1,10 +1,10 @@
 
                 GNU General Public License v2.0
         ############################################################
-        #     Program Name: KeyPosé			                           #
-        #			Version:	    1.0							                       #
-        #			Description:  Shows Keyboard Keystrokes and          #
-        #                   Key Combinations in Real-time.         #
+        #           Program Name: KeyPosé                          #
+        #           Version:      1.0                              #
+        #           Description:  Shows Keyboard Keystrokes and    #
+        #                         Key Combinations in Real-time.   #
         ############################################################
 
         Copyright (c) 2016 John Smith "0x90"
