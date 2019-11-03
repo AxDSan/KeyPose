@@ -20,7 +20,7 @@
         GNU General Public License for more details.
 
 # KeyPosé
-Shows Keyboard strokes on-screen in a nicely and elegant display.
+Shows Keyboard pressed keys (combinations) on-screen in a nicely and elegant display.
 
 ![KeyPosé Running](http://i.imgur.com/XehPl0P.png)
 
