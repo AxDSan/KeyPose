@@ -1,5 +1,6 @@
 ﻿using Gma.System.MouseKeyHook;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows;
@@ -45,6 +46,8 @@ namespace KeyPose
         private DispatcherTimer _timer;
         private int _counter;
         private bool typing = false;
+        private List<string> keychar = new List<string>();
+        private List<long> keytime = new List<long>();
         private string KeyPressed;
         private string KeyPressed2;
         public Keys CTLR;
@@ -55,7 +58,7 @@ namespace KeyPose
         {
             _timer = new DispatcherTimer();
             _timer.Tick += MyTimerTick;
-            _timer.Interval = new TimeSpan(0, 0, 0, 1);
+            _timer.Interval = new TimeSpan(0, 0, 0, 0,500);
 
             InitializeComponent();
             Subscribe();
@@ -74,19 +77,38 @@ namespace KeyPose
         private void MyTimerTick(object sender, EventArgs e)
         {
             Counter++;
+            removeKeys();
             if (Counter == 4)
             {
                 if (typing == true)
                 {
+                    Console.WriteLine("elementzd");
                     ElementFlowSelectionChanged();
                 }
                 else
                 {
+                    Console.WriteLine("exit");
                     ExitAnimRectangleWindow();
                     //textBlock.Text = "Reached the 2 seconds countdown!";
                     //ElementFlowSelectionChanged();
                 }
             }
+        }
+
+        private void removeKeys() {
+            Console.WriteLine("clear");
+            long milliseconds = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+            int i = 0;
+            while (i < keytime.Count)
+            {
+                if (keytime[i] + 1000 < milliseconds)
+                {
+                    keytime.RemoveAt(i);
+                    keychar.RemoveAt(i);
+                }
+                else i++;
+            }
+            textBlock.Text = getKeys();
         }
 
         private void ElementFlowSelectionChanged()
@@ -96,6 +118,7 @@ namespace KeyPose
             _timer.Start();
             //_timer.Interval = new TimeSpan(0, 0, 0, 1);
             //_timer.Start();
+            // bonjour je suis un commentaire incroyable xd qqqqqq
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -133,7 +156,7 @@ namespace KeyPose
 
             m_GlobalHook.MouseDownExt += GlobalHookMouseDownExt;
             m_GlobalHook.KeyPress += GlobalHookKeyPress;
-            //m_GlobalHook.KeyDown += GlobalHookKeyDown;
+            m_GlobalHook.KeyDown += GlobalHookKeyDown;
             
         }
 
@@ -141,7 +164,8 @@ namespace KeyPose
         {
             if ((Control.ModifierKeys & Keys.Control & e.KeyCode) == Keys.Control)
             {
-                textBlock.Text = string.Format("CTRL + ", e.KeyValue);
+                //textBlock.Text = string.Format("CTRL + ", e.KeyValue);
+                Console.WriteLine("CTRL:" + e.KeyValue);
             }
         }
 
@@ -174,39 +198,43 @@ namespace KeyPose
 
         private void GlobalHookKeyPress(object sender, KeyPressEventArgs e)
         {
+            Console.WriteLine("EVENT:" + e.ToString());
             typing = true;
             ElementFlowSelectionChanged();
             EnterAnimRectangleWindow();
             KeyPressed = handleKeyPressed(e);
-            switch (Convert.ToInt32(e.KeyChar))
+            int key = Convert.ToInt32(e.KeyChar);
+            Console.WriteLine("Keycode: " + key);
+            switch (key)
             {
                 case 13:
-                    textBlock.Text = "↵";
+                    addKey("↵");
                     break;
 
                 case 27:
-                    textBlock.Text = "ESC";
+                    addKey("ESC");
                     break;
 
                 case 9:
-                    textBlock.Text = "↹";
+                    addKey("↹");
                     break;
 
                 case 32:
-                    textBlock.Text = "⎵";
+                    addKey("⎵");
                     break;
 
                 case 8:
-                    textBlock.Text = "←";
+                    addKey("←");
                     break;
 
                 default:
-                    if ((Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+                    if(key <= 26) {
+                        char c = (char) (key + 96);
+                        Console.WriteLine("C:" + c);
+                        addKey("Ctrl+" + c);
+                    } else
                     {
-                        textBlock.Text = "CTRL + " + KeyPressed2;
-                    }else
-                    {
-                        textBlock.Text = KeyPressed;
+                        addKey(KeyPressed);
                     }
                     break;
             }
@@ -214,9 +242,29 @@ namespace KeyPose
 
         }
 
+        private void addKey(String s)
+        {
+            long milliseconds = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+            keytime.Add(milliseconds);
+            keychar.Add(s);
+            textBlock.Text = getKeys();
+        }
+
+        private string getKeys()
+        {
+            String s = "";
+            foreach (var k in keychar)
+            {
+                s += k;
+            }
+            return s;
+        }
+
         private string handleKeyPressed(KeyPressEventArgs e)
         {
+            Console.WriteLine("HANDLE:" + e.ToString());
             string tmp = e.KeyChar.ToString();
+            Console.WriteLine("TMP:" + e.KeyChar.ToString());
             return tmp;
         }
 
@@ -233,7 +281,7 @@ namespace KeyPose
         {
             m_GlobalHook.MouseDownExt -= GlobalHookMouseDownExt;
             m_GlobalHook.KeyPress -= GlobalHookKeyPress;
-            //m_GlobalHook.KeyDown -= GlobalHookKeyDown;
+            m_GlobalHook.KeyDown -= GlobalHookKeyDown;
 
             //It is recommened to dispose it
             m_GlobalHook.Dispose();
@@ -248,7 +296,8 @@ namespace KeyPose
         private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             KeyPressed2 = e.Key.ToString();
-
+            Console.WriteLine("je suis la");
+            Console.WriteLine("p2:" + KeyPressed2);
             //if ((Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
             //{
             //    KeyPressed2 = e.Key.ToString();
