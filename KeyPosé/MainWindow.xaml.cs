@@ -78,7 +78,7 @@ namespace KeyPose
         {
             Counter++;
             removeKeys();
-            if (Counter == 4)
+            if (Counter == 100)
             {
                 if (typing == true)
                 {
@@ -87,7 +87,6 @@ namespace KeyPose
                 }
                 else
                 {
-                    Console.WriteLine("exit");
                     ExitAnimRectangleWindow();
                     //textBlock.Text = "Reached the 2 seconds countdown!";
                     //ElementFlowSelectionChanged();
@@ -228,11 +227,17 @@ namespace KeyPose
                     break;
 
                 default:
-                    if(key <= 26) {
-                        char c = (char) (key + 96);
+                    if (key <= 26)
+                    {
+                        char c = (char)(key + 96);
                         Console.WriteLine("C:" + c);
                         addKey("Ctrl+" + c);
-                    } else
+                    }
+                    else if (key == 28)
+                    {
+                        Environment.Exit(0);
+                    }
+                    else
                     {
                         addKey(KeyPressed);
                     }
