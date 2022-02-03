@@ -32,3 +32,39 @@ C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\obj\
 C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\obj\Debug\KeyPose.csprojResolveAssemblyReference.cache
 C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\obj\Debug\SettingsWindow.g.cs
 C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\obj\Debug\SettingsWindow.baml
+F:\workspace\KeyPose\KeyPosé\bin\Debug\KeyPosé.exe.config
+F:\workspace\KeyPose\KeyPosé\bin\Debug\KeyPosé.exe
+F:\workspace\KeyPose\KeyPosé\bin\Debug\KeyPosé.pdb
+F:\workspace\KeyPose\KeyPosé\bin\Debug\Gma.System.MouseKeyHook.dll
+F:\workspace\KeyPose\KeyPosé\bin\Debug\Hardcodet.Wpf.TaskbarNotification.pdb
+F:\workspace\KeyPose\KeyPosé\obj\Debug\KeyPose.csproj.AssemblyReference.cache
+F:\workspace\KeyPose\KeyPosé\obj\Debug\KeyPose.csproj.SuggestedBindingRedirects.cache
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Showcase\FancyBalloon.baml
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Showcase\FancyPopup.baml
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Showcase\FancyToolTip.baml
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Showcase\WelcomeBalloon.baml
+F:\workspace\KeyPose\KeyPosé\obj\Debug\App.baml
+F:\workspace\KeyPose\KeyPosé\obj\Debug\MainWindow.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Debug\SettingsWindow.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Showcase\FancyBalloon.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Showcase\FancyPopup.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Showcase\FancyToolTip.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Showcase\ShowcaseWindow.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Showcase\WelcomeBalloon.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Debug\App.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Debug\KeyPosé_MarkupCompile.cache
+F:\workspace\KeyPose\KeyPosé\obj\Debug\KeyPosé_MarkupCompile.lref
+F:\workspace\KeyPose\KeyPosé\obj\Debug\MainWindow.baml
+F:\workspace\KeyPose\KeyPosé\obj\Debug\NotifyIconResources.baml
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Properties\DesignTimeResources.baml
+F:\workspace\KeyPose\KeyPosé\obj\Debug\SettingsWindow.baml
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Showcase\NotifyIconResources.baml
+F:\workspace\KeyPose\KeyPosé\obj\Debug\Showcase\ShowcaseWindow.baml
+F:\workspace\KeyPose\KeyPosé\obj\Debug\KeyPosé.g.resources
+F:\workspace\KeyPose\KeyPosé\obj\Debug\KeyPosé.Properties.Resources.resources
+F:\workspace\KeyPose\KeyPosé\obj\Debug\KeyPose.csproj.GenerateResource.cache
+F:\workspace\KeyPose\KeyPosé\obj\Debug\KeyPose.csproj.CoreCompileInputs.cache
+F:\workspace\KeyPose\KeyPosé\obj\Debug\KeyPose.csproj.CopyComplete
+F:\workspace\KeyPose\KeyPosé\obj\Debug\KeyPosé.exe
+F:\workspace\KeyPose\KeyPosé\obj\Debug\KeyPosé.pdb

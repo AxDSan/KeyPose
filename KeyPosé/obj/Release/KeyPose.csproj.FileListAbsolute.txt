@@ -1,0 +1,17 @@
+F:\workspace\KeyPose\KeyPosé\obj\Release\KeyPose.csproj.AssemblyReference.cache
+F:\workspace\KeyPose\KeyPosé\obj\Release\KeyPose.csproj.SuggestedBindingRedirects.cache
+F:\workspace\KeyPose\KeyPosé\obj\Release\Showcase\FancyBalloon.baml
+F:\workspace\KeyPose\KeyPosé\obj\Release\Showcase\FancyPopup.baml
+F:\workspace\KeyPose\KeyPosé\obj\Release\Showcase\FancyToolTip.baml
+F:\workspace\KeyPose\KeyPosé\obj\Release\Showcase\WelcomeBalloon.baml
+F:\workspace\KeyPose\KeyPosé\obj\Release\App.baml
+F:\workspace\KeyPose\KeyPosé\obj\Release\MainWindow.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Release\SettingsWindow.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Release\Showcase\FancyBalloon.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Release\Showcase\FancyPopup.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Release\Showcase\FancyToolTip.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Release\Showcase\WelcomeBalloon.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Release\App.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Release\GeneratedInternalTypeHelper.g.cs
+F:\workspace\KeyPose\KeyPosé\obj\Release\KeyPosé_MarkupCompile.cache
+F:\workspace\KeyPose\KeyPosé\obj\Release\KeyPosé_MarkupCompile.lref

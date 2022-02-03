@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\obj\Debug\
+F:\workspace\KeyPose\KeyPosé\obj\Debug\
 KeyPosé
 none
 false
 DEBUG;TRACE
-C:\Users\John Smith\Documents\Visual Studio 2015\Projects\KeyPosé\KeyPosé\App.xaml
-10-1536904517
+F:\workspace\KeyPose\KeyPosé\App.xaml
+101346577490
 
-16406357286
-18-830646488
+16-96288333
+18-149266349
 MainWindow.xaml;NotifyIconResources.xaml;Properties\DesignTimeResources.xaml;SettingsWindow.xaml;Showcase\FancyBalloon.xaml;Showcase\FancyPopup.xaml;Showcase\FancyToolTip.xaml;Showcase\NotifyIconResources.xaml;Showcase\ShowcaseWindow.xaml;Showcase\WelcomeBalloon.xaml;
 
 False
